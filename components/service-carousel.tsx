@@ -6,38 +6,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const services = [
   {
     image: 'https://www.image2url.com/r2/default/images/1780921199864-c6ec52a9-c419-4136-a32b-0c9117d74076.jpg',
-    title: 'Traditional Funeral Service',
-    description: 'Professional and respectful traditional funeral arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921236137-7e6da3df-fda8-4433-a9bb-7896a83a3919.jpg',
-    title: 'Cremation Service',
-    description: 'Professional and respectful cremation service arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921275423-5f7f72b4-83bb-47da-83a8-500cf64de6eb.jpg',
-    title: 'Memorial Service',
-    description: 'Professional and respectful memorial service arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921301434-799d0f75-0e7e-41c8-8f44-d5712fb5d9c5.jpg',
-    title: 'Burial Service',
-    description: 'Professional and respectful burial service arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921325840-97a90524-7c0a-49ac-a487-5c7305b3b1c6.jpg',
-    title: 'Transportation Service',
-    description: 'Professional and respectful transportation service arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921348551-aad17b10-11c3-40d6-a613-dc2c5778f880.jpg',
-    title: 'Funeral Planning',
-    description: 'Professional and respectful funeral planning arrangements',
   },
   {
     image: 'https://www.image2url.com/r2/default/images/1780921375026-4511318d-dfcb-4a21-834a-993585f6d595.jpg',
-    title: 'Aftercare Support',
-    description: 'Professional and respectful aftercare support arrangements',
   },
 ];
 
@@ -54,13 +40,9 @@ export default function ServiceCarousel() {
           <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
             <img
               src={services[current].image}
-              alt={services[current].title}
+              alt="Service gallery"
               className="w-full h-full object-cover transition-opacity duration-500"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
-              <h4 className="text-2xl font-bold text-white mb-1">{services[current].title}</h4>
-              <p className="text-gray-200 text-sm">{services[current].description}</p>
-            </div>
           </div>
 
           <button

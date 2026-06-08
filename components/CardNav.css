@@ -196,7 +196,22 @@ html.dark .logo-text {
   }
 
   .card-nav-cta-button {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: calc(0.75rem - 0.35rem);
+    padding: 0 0.75rem;
+    height: 38px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    order: 3;
+    white-space: nowrap;
   }
 
   .card-nav-content {

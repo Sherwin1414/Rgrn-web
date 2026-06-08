@@ -54,8 +54,7 @@ export default async function HomePage() {
         isLoggedIn={!!session}
         ctaHref={session ? '/dashboard/profile' : '/login'}
         ctaLabel="Sign In"
-        ease="power3.out"
-      />
+        />
 
       {/* Hero Section */}
       <section className="relative py-20 pt-28 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://www.image2url.com/r2/default/images/1780910399102-ea2ec2de-881e-4509-b4a3-2c72652ca985.png')` }}>

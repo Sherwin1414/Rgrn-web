@@ -24,14 +24,16 @@ html.dark .card-nav {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
-  will-change: height;
+  transition: height 0.35s ease;
+}
+
+.card-nav.open {
+  height: auto;
+  min-height: 60px;
 }
 
 .card-nav-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   height: 60px;
   display: flex;
   align-items: center;
@@ -98,7 +100,7 @@ html.dark .logo-text {
   border: none;
   border-radius: calc(0.75rem - 0.35rem);
   padding: 0 1rem;
-  height: 100%;
+  height: calc(100% - 4px);
   font-weight: 500;
   font-size: 0.875rem;
   cursor: pointer;
@@ -114,27 +116,27 @@ html.dark .logo-text {
 }
 
 .card-nav-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  bottom: 0;
-  padding: 0.5rem;
   display: flex;
   align-items: flex-end;
   gap: 12px;
+  padding: 0 0.5rem 0.5rem 0.5rem;
   visibility: hidden;
   pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
   z-index: 1;
 }
 
 .card-nav.open .card-nav-content {
   visibility: visible;
   pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav-card {
-  height: 100%;
+  height: 200px;
   flex: 1 1 0;
   min-width: 0;
   border-radius: calc(0.75rem - 0.2rem);
@@ -180,6 +182,11 @@ html.dark .logo-text {
     top: 0.8em;
   }
 
+  .card-nav.open {
+    height: auto;
+    min-height: 60px;
+  }
+
   .card-nav-top {
     padding: 0.5rem 1rem;
     justify-content: space-between;
@@ -218,14 +225,12 @@ html.dark .logo-text {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-    padding: 0.5rem;
-    bottom: 0;
-    justify-content: flex-start;
+    padding: 0 0.5rem 0.5rem 0.5rem;
   }
 
   .nav-card {
     height: auto;
-    min-height: 60px;
+    min-height: 80px;
     flex: 1 1 auto;
     max-height: none;
   }

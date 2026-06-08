@@ -51,8 +51,7 @@ export default async function AboutPage() {
         isLoggedIn={!!session}
         ctaHref={session ? '/dashboard/profile' : '/login'}
         ctaLabel="Sign In"
-        ease="power3.out"
-      />
+        />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 pt-28">

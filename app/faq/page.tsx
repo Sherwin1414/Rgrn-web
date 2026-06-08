@@ -80,7 +80,7 @@ export default async function FAQPage() {
 
   return (
     <div className="w-full">
-      <CardNav items={navItems} baseColor="#fff" menuColor="#1e293b" buttonBgColor="#2563eb" buttonTextColor="#fff" isLoggedIn={!!session} ctaHref={session ? '/dashboard/profile' : '/login'} ctaLabel="Sign In" ease="power3.out" />
+      <CardNav items={navItems} baseColor="#fff" menuColor="#1e293b" buttonBgColor="#2563eb" buttonTextColor="#fff" isLoggedIn={!!session} ctaHref={session ? '/dashboard/profile' : '/login'} ctaLabel="Sign In" />
       <section className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-20 pt-28">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-6">Frequently Asked Questions</h1>
